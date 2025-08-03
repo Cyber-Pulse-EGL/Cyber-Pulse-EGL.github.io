@@ -1050,36 +1050,74 @@
         }
 
         // Toast notification system
+        // function showToast(message, type = 'success') {
+        //     const toast = document.getElementById('toast');
+        //     const toastIcon = document.getElementById('toast-icon');
+        //     const toastMessage = document.getElementById('toast-message');
+            
+        //     // Set content
+        //     toastMessage.textContent = message;
+            
+        //     // Set icon and colors based on type
+        //     if (type === 'success') {
+        //         toast.className = 'fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-green-500 text-white transform translate-x-full transition-transform duration-300 z-50';
+        //         toastIcon.className = 'fas fa-check-circle text-xl';
+        //     } else if (type === 'error') {
+        //         toast.className = 'fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-red-500 text-white transform translate-x-full transition-transform duration-300 z-50';
+        //         toastIcon.className = 'fas fa-exclamation-circle text-xl';
+        //     } else {
+        //         toast.className = 'fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-blue-500 text-white transform translate-x-full transition-transform duration-300 z-50';
+        //         toastIcon.className = 'fas fa-info-circle text-xl';
+        //     }
+            
+        //     // Show toast
+        //     setTimeout(() => {
+        //         toast.style.transform = 'translateX(0)';
+        //     }, 100);
+            
+        //     // Hide toast after 4 seconds
+        //     setTimeout(() => {
+        //         toast.style.transform = 'translateX(100%)';
+        //     }, 4000);
+        // }
+
         function showToast(message, type = 'success') {
-            const toast = document.getElementById('toast');
-            const toastIcon = document.getElementById('toast-icon');
-            const toastMessage = document.getElementById('toast-message');
+                const toast = document.getElementById('toast');
+                const toastIcon = document.getElementById('toast-icon');
+                const toastMessage = document.getElementById('toast-message');
             
-            // Set content
-            toastMessage.textContent = message;
+                // Set message text
+                toastMessage.textContent = message;
             
-            // Set icon and colors based on type
-            if (type === 'success') {
-                toast.className = 'fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-green-500 text-white transform translate-x-full transition-transform duration-300 z-50';
-                toastIcon.className = 'fas fa-check-circle text-xl';
-            } else if (type === 'error') {
-                toast.className = 'fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-red-500 text-white transform translate-x-full transition-transform duration-300 z-50';
-                toastIcon.className = 'fas fa-exclamation-circle text-xl';
-            } else {
-                toast.className = 'fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-blue-500 text-white transform translate-x-full transition-transform duration-300 z-50';
-                toastIcon.className = 'fas fa-info-circle text-xl';
+                // Reset toast color and icon
+                toast.classList.remove('bg-green-500', 'bg-red-500', 'bg-blue-500');
+                if (type === 'success') {
+                    toast.classList.add('bg-green-500');
+                    toastIcon.className = 'fas fa-check-circle text-xl';
+                } else if (type === 'error') {
+                    toast.classList.add('bg-red-500');
+                    toastIcon.className = 'fas fa-exclamation-circle text-xl';
+                } else {
+                    toast.classList.add('bg-blue-500');
+                    toastIcon.className = 'fas fa-info-circle text-xl';
+                }
+            
+                // Show toast
+                toast.classList.remove('translate-x-full', 'hidden');
+                toast.classList.add('translate-x-0');
+            
+                // Hide after 4 seconds
+                setTimeout(() => {
+                    toast.classList.remove('translate-x-0');
+                    toast.classList.add('translate-x-full');
+            
+                    // Fully hide after transition completes
+                    setTimeout(() => {
+                        toast.classList.add('hidden');
+                    }, 300); // Match Tailwind transition duration
+                }, 4000);
             }
-            
-            // Show toast
-            setTimeout(() => {
-                toast.style.transform = 'translateX(0)';
-            }, 100);
-            
-            // Hide toast after 4 seconds
-            setTimeout(() => {
-                toast.style.transform = 'translateX(100%)';
-            }, 4000);
-        }
+
 
         // Enhanced smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1366,6 +1404,7 @@
 </body>
 
 </html>
+
 
 
 
