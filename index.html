@@ -930,9 +930,15 @@
     </button>
 
     <!-- Success/Error Toast -->
-    <div id="toast" class="fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+    <!-- <div id="toast" class="fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50">
         <div id="toast-content" class="flex items-center space-x-3">
             <i id="toast-icon" class="text-xl" aria-hidden="true"></i>
+            <span id="toast-message"></span>
+        </div>
+    </div> -->
+    <div id="toast" class="fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-green-500 text-white translate-x-full transition-transform duration-300 z-50 hidden">
+        <div id="toast-content" class="flex items-center space-x-3">
+            <i id="toast-icon" class="fas fa-check-circle text-xl" aria-hidden="true"></i>
             <span id="toast-message"></span>
         </div>
     </div>
@@ -1360,5 +1366,6 @@
 </body>
 
 </html>
+
 
 
