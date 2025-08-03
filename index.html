@@ -998,25 +998,26 @@
         function openGoogleDrive() {
             const button = event.target.closest('button');
             const originalText = button.innerHTML;
-            
+        
             // Add loading state
             button.classList.add('loading');
             button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Opening...';
             button.disabled = true;
-            
+        
             setTimeout(() => {
-                // Open Google Drive
-                window.open('https://drive.google.com/drive/folders/example-security-resources', '_blank');
-                
+                // Open internal page in new tab
+                window.open('http://192.168.1.54:8080/public/team.html', '_blank');
+        
                 // Reset button state
                 button.classList.remove('loading');
                 button.innerHTML = originalText;
                 button.disabled = false;
-                
+        
                 // Show success toast
-                showToast('Resource library opened in new tab!', 'success');
+                showToast('Team page opened in new tab!', 'success');
             }, 1000);
         }
+
 
         // Newsletter subscription handler
         function handleNewsletterSubmit(event) {
@@ -1357,4 +1358,5 @@
         });
     </script>
 </body>
+
 </html>
