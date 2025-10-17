@@ -3,1378 +3,1005 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Awareness Program | SecureGuard</title>
-    <meta name="description" content="Empowering teams with comprehensive cyber security awareness, training, and protection strategies. Join our initiative to build stronger digital defenses.">
-    <meta name="keywords" content="cyber security, awareness program, digital protection, security training, Eguardian">
-    <meta name="author" content="Eguardian Security Team">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Cyber Security Awareness Program">
-    <meta property="og:description" content="Empowering Teams to Stay Safe Online">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://res.cloudinary.com/dkj22lm1g/image/upload/v1754300275/Asset_2_x7emfp.png">
-    
-    <!-- Favicon -->
+    <title>Coming Soon | Cyber Pulse Security</title>
+    <meta name="description" content="Revolutionary Cyber Security Awareness Program launching soon. Stay tuned for advanced protection, expert training, and comprehensive security solutions.">
     <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dkj22lm1g/image/upload/v1760512747/cyber-security_bxvp7l.ico">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #0ea5e9 0%, #0284c7 25%, #0369a1 50%, #075985 100%);
-            --secondary-gradient: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);
-            --success-gradient: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
-            --hero-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 100%);
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
+            --cyber-cyan: #00fff9;
+            --cyber-blue: #0ea5e9;
+            --cyber-purple: #a855f7;
+            --cyber-pink: #ec4899;
+            --dark-bg: #0a0e1a;
+            --darker-bg: #050810;
         }
         
         * {
-            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        /* Improved Hero Section */
-        .hero-gradient {
-            background: var(--hero-gradient);
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
             position: relative;
-            overflow: hidden;
+            min-height: 100vh;
         }
         
-        .hero-gradient::before {
-            content: '';
-            position: absolute;
+        .orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        /* Animated Background */
+        .cyber-bg {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:%23ffffff;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%23ffffff;stop-opacity:0"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23a)"/></svg>');
-            pointer-events: none;
-        }
-        
-        .floating-shapes {
-            position: absolute;
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            pointer-events: none;
+            z-index: 0;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 50%, #0f1729 100%);
         }
         
-        .floating-shape {
-            position: absolute;
-            background: rgba(6, 182, 212, 0.1);
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 249, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 249, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* Floating Particles */
+        .particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: var(--cyber-cyan);
             border-radius: 50%;
-            animation: float 20s infinite linear;
+            pointer-events: none;
+            z-index: 2;
+            box-shadow: 0 0 10px var(--cyber-cyan);
         }
         
-        .floating-shape:nth-child(1) { width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s; }
-        .floating-shape:nth-child(2) { width: 150px; height: 150px; top: 60%; left: 80%; animation-delay: -5s; }
-        .floating-shape:nth-child(3) { width: 80px; height: 80px; top: 80%; left: 20%; animation-delay: -10s; }
-        .floating-shape:nth-child(4) { width: 120px; height: 120px; top: 30%; left: 70%; animation-delay: -15s; }
+        /* Glowing Orbs */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 1;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .orb-1 {
+            top: 10%;
+            left: 10%;
+            width: 400px;
+            height: 400px;
+            background: var(--cyber-cyan);
+            animation-delay: 0s;
+        }
+        
+        .orb-2 {
+            bottom: 10%;
+            right: 10%;
+            width: 350px;
+            height: 350px;
+            background: var(--cyber-purple);
+            animation-delay: -5s;
+        }
+        
+        .orb-3 {
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: var(--cyber-blue);
+            animation-delay: -10s;
+        }
         
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(90deg); }
-            50% { transform: translateY(-40px) rotate(180deg); }
-            75% { transform: translateY(-20px) rotate(270deg); }
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.9); }
+            75% { transform: translate(20px, 30px) scale(1.05); }
         }
         
-        /* Glass Morphism Effects */
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        /* Main Content */
+        .main-content {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
-        /* Enhanced Animations */
-        .card-hover {
+        /* Logo Animation */
+        .logo-container {
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes logoGlow {
+            0%, 100% { filter: drop-shadow(0 0 20px var(--cyber-cyan)); }
+            50% { filter: drop-shadow(0 0 40px var(--cyber-cyan)) drop-shadow(0 0 60px var(--cyber-blue)); }
+        }
+        
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+            animation: glitch 5s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            91% { transform: translate(-2px, 2px); }
+            92% { transform: translate(2px, -2px); }
+            93% { transform: translate(-2px, 2px); }
+            94% { transform: translate(2px, -2px); }
+        }
+        
+        /* Neon Text */
+        .neon-text {
+            text-shadow: 
+                0 0 10px var(--cyber-cyan),
+                0 0 20px var(--cyber-cyan),
+                0 0 30px var(--cyber-cyan),
+                0 0 40px var(--cyber-blue);
+            animation: neonPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes neonPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* Cyber Border */
+        .cyber-border {
+            position: relative;
+            padding: 3px;
+            background: linear-gradient(45deg, var(--cyber-cyan), var(--cyber-blue), var(--cyber-purple), var(--cyber-pink));
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease infinite;
+            border-radius: 1rem;
+        }
+        
+        .cyber-border-inner {
+            background: rgba(10, 14, 26, 0.95);
+            border-radius: 0.875rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Countdown */
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 249, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .countdown-item:hover {
+            background: rgba(0, 255, 249, 0.1);
+            border-color: var(--cyber-cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 249, 0.3);
+        }
+        
+        .countdown-number {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Button Styles */
+        .cyber-button {
+            position: relative;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-blue));
+            border: none;
+            border-radius: 0.5rem;
+            color: var(--darker-bg);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cyber-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cyber-button:hover::before {
+            left: 100%;
+        }
+        
+        .cyber-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 255, 249, 0.5);
+        }
+        
+        /* Input Styles */
+        .cyber-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 249, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .cyber-input:focus {
+            outline: none;
+            border-color: var(--cyber-cyan);
+            box-shadow: 0 0 20px rgba(0, 255, 249, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .cyber-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 249, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
         }
         
-        .card-hover:hover {
-            transform: translateY(-12px) rotateX(5deg);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        .feature-card:hover {
+            background: rgba(0, 255, 249, 0.05);
+            border-color: var(--cyber-cyan);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 249, 0.2);
         }
         
-        /* Button Improvements */
-        .btn-primary {
-            background: var(--primary-gradient);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
+        .feature-icon {
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
         
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(14, 165, 233, 0.4);
-        }
-        
-        .btn-secondary {
-            background: var(--success-gradient);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-secondary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .btn-secondary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
-        }
-        
-        /* Enhanced Social Icons */
+        /* Social Icons */
         .social-icon {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 249, 0.2);
+            border-radius: 50%;
+            color: var(--cyber-cyan);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
         
         .social-icon:hover {
-            transform: translateY(-3px) scale(1.15);
+            background: var(--cyber-cyan);
+            color: var(--darker-bg);
+            transform: translateY(-5px) rotate(360deg);
+            box-shadow: 0 10px 30px rgba(0, 255, 249, 0.4);
         }
         
-        .social-icon.linkedin:hover { color: #0077b5; }
-        .social-icon.twitter:hover { color: #1da1f2; }
-        .social-icon.github:hover { color: #333; }
-        
-        /* Advanced Animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease-out forwards;
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
         }
         
-        .fade-in-left {
-            opacity: 0;
-            transform: translateX(-30px);
-            animation: fadeInLeft 0.8s ease-out forwards;
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyber-cyan), var(--cyber-blue), var(--cyber-purple));
+            background-size: 200% 100%;
+            animation: progressShimmer 2s linear infinite;
+            width: 65%;
         }
         
-        .fade-in-right {
-            opacity: 0;
-            transform: translateX(30px);
-            animation: fadeInRight 0.8s ease-out forwards;
+        @keyframes progressShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
         
-        .scale-in {
-            opacity: 0;
-            transform: scale(0.8);
-            animation: scaleIn 0.6s ease-out forwards;
-        }
-        
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes fadeInLeft {
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        @keyframes fadeInRight {
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        @keyframes scaleIn {
-            to { opacity: 1; transform: scale(1); }
-        }
-        
-        /* Staggered Animation Delays */
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
-        .delay-600 { animation-delay: 0.6s; }
-        
-        /* Loading State */
-        .loading {
-            pointer-events: none;
-            opacity: 0.7;
-        }
-        
-        .loading::after {
-            content: '';
+        /* Scroll Indicator */
+        .scroll-indicator {
             position: absolute;
-            top: 50%;
+            bottom: 2rem;
             left: 50%;
-            width: 20px;
-            height: 20px;
-            margin: -10px 0 0 -10px;
-            border: 2px solid transparent;
-            border-top: 2px solid #fff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
         }
         
-        /* Mobile Navigation */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-blue));
+            color: var(--darker-bg);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 40px rgba(0, 255, 249, 0.5);
+            transform: translateX(calc(100% + 2rem));
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            font-weight: 600;
+            opacity: 0;
+            visibility: hidden;
         }
         
-        .mobile-menu.active {
+        .toast.show {
             transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
         }
         
-        /* Stats Counter Animation */
-        .counter {
-            font-variant-numeric: tabular-nums;
-        }
-        
-        /* Parallax Effect */
-        .parallax {
-            transform: translateZ(0);
-            transition: transform 0.1s ease-out;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: var(--secondary-gradient);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #0891b2;
-        }
-        
-        /* Focus States for Accessibility */
-        .focus-visible:focus {
-            outline: 2px solid #06b6d4;
-            outline-offset: 2px;
-        }
-        
-        /* Print Styles */
-        @media print {
-            .no-print { display: none !important; }
-        }
-        
-        /* High Contrast Mode Support */
-        @media (prefers-contrast: high) {
-            .hero-gradient {
-                background: #000;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .orb-1, .orb-2, .orb-3 {
+                width: 200px;
+                height: 200px;
             }
             
-            .card-hover:hover {
-                border: 2px solid #fff;
+            .countdown-item {
+                padding: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .feature-card {
+                padding: 1.5rem;
+            }
+            
+            .cyber-button {
+                padding: 0.875rem 2rem;
+                font-size: 0.875rem;
+            }
+            
+            .toast {
+                right: 1rem;
+                left: 1rem;
+                top: 1rem;
             }
         }
         
-        /* Reduced Motion Support */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+        @media (max-width: 480px) {
+            .countdown-number {
+                font-size: 1.5rem;
             }
+            
+            h1 {
+                font-size: 2rem !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+        }
+        
+        /* Loading Animation */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--cyber-cyan);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Skip to Content Link for Accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50">
-        Skip to main content
-    </a>
-
-    <!-- Header Section -->
-    <header class="hero-gradient text-white relative overflow-hidden min-h-screen flex flex-col">
-        <div class="floating-shapes">
-            <div class="floating-shape"></div>
-            <div class="floating-shape"></div>
-            <div class="floating-shape"></div>
-            <div class="floating-shape"></div>
-        </div>
-        
-        <!-- Navigation -->
-        <nav class="relative z-20 container mx-auto px-6 py-6" role="navigation" aria-label="Main navigation">
+<body>
+    <!-- Animated Background -->
+    <div class="cyber-bg"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Glowing Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="container mx-auto px-6 py-8">
             <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3 fade-in-left">
-                    <div class="w-12 h-12 glass-card rounded-xl flex items-center justify-center">
-                        <i class="fas fa-shield-alt text-cyan-400 text-xl" aria-hidden="true"></i>
+                <div class="flex items-center space-x-3 logo-container">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
                     </div>
                     <div>
-                        <span class="text-2xl font-bold tracking-tight">Cyber Pulse</span>
-                        <div class="text-xs text-cyan-300 font-medium">Cyber Security Awareness Program</div>
+                        <h1 class="text-2xl font-bold orbitron">Cyber Pulse</h1>
+                        <p class="text-xs text-cyan-400">Security Awareness</p>
                     </div>
                 </div>
                 
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8 fade-in-right">
-                    <a href="#home" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Home</a>
-                    <a href="#resources" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Resources</a>
-                    <a href="#team" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Team</a>
-                    <a href="http://192.168.1.55:8080/public/feedback_form.html" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Feedback</a>
-                    <a href="#contact" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Contact</a>
-                    <button class="bg-cyan-500 hover:bg-cyan-600 px-6 py-2 rounded-lg font-semibold transition-all focus-visible">
-                        Get Started
-                    </button>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden glass-card p-3 rounded-lg focus-visible" aria-label="Toggle mobile menu">
-                    <i class="fas fa-bars text-xl" aria-hidden="true"></i>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Mobile Navigation Overlay -->
-        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-slate-900 z-50 lg:hidden">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-8">
-                    <span class="text-xl font-bold">Menu</span>
-                    <button id="close-mobile-menu" class="glass-card p-2 rounded-lg" aria-label="Close mobile menu">
-                        <i class="fas fa-times text-xl" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <nav class="space-y-4" role="navigation" aria-label="Mobile navigation">
-                    <a href="#home" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Home</a>
-                    <a href="#resources" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Resources</a>
-                    <a href="#team" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Team</a>
-                    <a href="http://192.168.1.55:8080/public/feedback_form.html" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Feedback</a>
-                    <a href="#contact" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Contact</a>
-                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-3 rounded-lg font-semibold transition-all mt-4">
-                        Get Started
-                    </button>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Hero Content -->
-        <div class="relative z-10 container mx-auto px-6 flex-1 flex items-center">
-            <div class="w-full text-center lg:text-left lg:w-1/2">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight fade-in-up">
-                    <span class="block text-white">Cyber Security</span>
-                    <span class="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                        Awareness Program
-                    </span>
-                </h1>
-                <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 fade-in-up delay-200">
-                    Empowering Teams to Stay Safe Online with cutting-edge security training and awareness initiatives.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start fade-in-up delay-400">
-                    <button class="btn-primary px-8 py-4 rounded-xl font-semibold text-white focus-visible">
-                        <i class="fas fa-rocket mr-2" aria-hidden="true"></i>Get Started
-                    </button>
-                    <button class="glass-card border-2 border-white/30 px-8 py-4 rounded-xl font-semibold text-white hover:bg-white/10 transition-all focus-visible">
-                        <i class="fas fa-play mr-2" aria-hidden="true"></i>Watch Demo
-                    </button>
-                </div>
-                
-                <!-- Stats Section -->
-                <div class="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6 fade-in-up delay-600">
-<!--                     <div class="text-center lg:text-left">
-                        <div class="text-3xl font-bold text-cyan-400 counter" data-target="500">0</div>
-                        <div class="text-sm text-slate-400">Teams Protected</div>
-                    </div>
-                    <div class="text-center lg:text-left">
-                        <div class="text-3xl font-bold text-cyan-400 counter" data-target="99.9">0</div>
-                        <div class="text-sm text-slate-400">% Uptime</div>
-                    </div>
-                    <div class="text-center lg:text-left col-span-2 md:col-span-1">
-                        <div class="text-3xl font-bold text-cyan-400 counter" data-target="24">0</div>
-                        <div class="text-sm text-slate-400">7 Support</div>
-                    </div> -->
+                <div class="flex space-x-3">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
             </div>
-            
-            <!-- Hero Illustration -->
-            <div class="hidden lg:block w-1/2 fade-in-right delay-300">
-                <div class="relative">
-                    <div class="w-96 h-96 mx-auto relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
-                        <div class="absolute inset-4 glass-card rounded-full flex items-center justify-center">
-                            <i class="fas fa-shield-alt text-8xl text-cyan-400" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Welcome Section -->
-        <section id="home" class="py-20 bg-white relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full blur-3xl opacity-30"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-8 fade-in-up">
-                    Welcome to Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">
-                        Cyber Security Initiative
-                    </span>
-                </h2>
-                <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-12 fade-in-up delay-200">
-                    Join us as we spread awareness on protecting digital assets, staying alert against threats, and promoting a safe online culture. 
-                    Together, we build stronger defenses against cyber threats and create a secure digital environment for everyone.
-                </p>
-                
-                <!-- Feature Highlights -->
-                <div class="grid md:grid-cols-3 gap-8 mt-16">
-                    <div class="text-center fade-in-up delay-300">
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-lock text-white text-2xl" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Advanced Protection</h3>
-                        <p class="text-slate-600">State-of-the-art security measures to safeguard your digital assets.</p>
-                    </div>
-                    <div class="text-center fade-in-up delay-400">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-graduation-cap text-white text-2xl" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Expert Training</h3>
-                        <p class="text-slate-600">Comprehensive training programs designed by security professionals.</p>
-                    </div>
-                    <div class="text-center fade-in-up delay-500">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-users text-white text-2xl" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Community Driven</h3>
-                        <p class="text-slate-600">Building a strong community of security-aware professionals.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Download & Resources Section -->
-        <section id="resources" class="py-20 bg-gradient-to-br from-slate-50 to-cyan-50 relative overflow-hidden">
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-100 to-cyan-100 rounded-full blur-3xl opacity-40"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 fade-in-up">
-                        Essential <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Resources</span>
-                    </h2>
-                    <p class="text-xl text-slate-600 max-w-3xl mx-auto fade-in-up delay-200">
-                        Access our comprehensive collection of security resources, guidelines, and training materials to enhance your cybersecurity knowledge.
-                    </p>
-                </div>
-                
-                <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <!-- Download PDF Card -->
-                    <div class="bg-white rounded-3xl p-8 shadow-xl card-hover border border-slate-200 fade-in-left delay-300">
-                        <div class="text-center">
-                            <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                                <i class="fas fa-file-pdf text-white text-3xl" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Network Connectivity Guide</h3>
-                            <p class="text-slate-600 mb-6 leading-relaxed">
-                                Download our comprehensive network security guidelines, connectivity protocols, and best practices documentation. 
-                                Essential reading for IT professionals and security teams.
-                            </p>
-                            <div class="flex items-center justify-center mb-6 text-sm text-slate-500">
-                                <i class="fas fa-file-alt mr-2" aria-hidden="true"></i>
-                                <span>PDF Format • 2.4 MB • 8 Pages</span>
-                            </div>
-                            <button onclick="downloadPDF()" class="btn-primary w-full py-4 rounded-xl font-semibold text-white relative focus-visible" 
-                                    aria-describedby="pdf-description">
-                                <i class="fas fa-download mr-2" aria-hidden="true"></i>Download PDF Guide
-                            </button>
-                            <div id="pdf-description" class="sr-only">Download network connectivity details PDF file</div>
-                        </div>
-                    </div>
-
-                    <!-- Google Drive Card -->
-                    <div class="bg-white rounded-3xl p-8 shadow-xl card-hover border border-slate-200 fade-in-right delay-400">
-                        <div class="text-center">
-                            <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                                <i class="fab fa-google-drive text-white text-3xl" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Security Resources Library</h3>
-                            <p class="text-slate-600 mb-6 leading-relaxed">
-                                Access our comprehensive cloud library featuring security tools, training materials, templates, and industry best practices. 
-                                Regularly updated with the latest security resources.
-                            </p>
-                            <div class="flex items-center justify-center mb-6 text-sm text-slate-500">
-                                <i class="fas fa-cloud mr-2" aria-hidden="true"></i>
-                                <span>Cloud Storage • 500+ Files • Always Updated</span>
-                            </div>
-                            <button onclick="openGoogleDrive()" class="btn-secondary w-full py-4 rounded-xl font-semibold text-white relative focus-visible"
-                                    aria-describedby="drive-description">
-                                <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>Access Resource Library
-                            </button>
-                            <div id="drive-description" class="sr-only">Open security resources Google Drive in new tab</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Additional Resources -->
-                <div class="mt-16 text-center fade-in-up delay-600">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-8">Quick Access Resources</h3>
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                        <a href="#" class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all group focus-visible">
-                            <i class="fas fa-book text-2xl text-blue-500 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-                            <div class="font-semibold text-slate-800">Training Manual</div>
-                        </a>
-                        <a href="#" class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all group focus-visible">
-                            <i class="fas fa-video text-2xl text-green-500 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-                            <div class="font-semibold text-slate-800">Video Tutorials</div>
-                        </a>
-                        <a href="#" class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all group focus-visible">
-                            <i class="fas fa-clipboard-check text-2xl text-purple-500 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-                            <div class="font-semibold text-slate-800">Security Checklist</div>
-                        </a>
-                        <a href="#" class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all group focus-visible">
-                            <i class="fas fa-headset text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-                            <div class="font-semibold text-slate-800">24/7 Support</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Members Section -->
-        <section id="team" class="py-20 bg-white relative overflow-hidden">
-            <div class="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-bl from-purple-100 to-pink-100 rounded-full blur-3xl opacity-30"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 fade-in-up">
-                        Meet Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Security Champions</span>
-                    </h2>
-                    <p class="text-xl text-slate-600 max-w-3xl mx-auto fade-in-up delay-200">
-                        Our dedicated team of cybersecurity experts, each bringing years of experience and specialized knowledge to keep your digital assets secure.
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    <!-- Team Member 1 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-100">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/4F46E5/FFFFFF?text=JW" alt="Portrait of Jayandra Wickramasinghe" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Jayandra Wickramasinghe</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Consultant - Cyber Security</p>
-                            <p class="text-sm text-slate-500 mb-6">Senior Level • Security Leadership</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Jayandra Wickramasinghe's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94761656375" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Jayandra Wickramasinghe">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Jayandra Wickramasinghe's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:jayandra.wickramasinghe@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>jayandra.wickramasinghe@eguardian.com
-                            </a>
-                        </article>
-
-                        <!-- Team Member 2 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-200">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/10B981/FFFFFF?text=SG" alt="Portrait of Suranga Gunatilake" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Suranga Gunatilake</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Associate Lead - Cyber Security</p>
-                            <p class="text-sm text-slate-500 mb-6">Leadership Role • Security Operations</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Suranga Gunatilake's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94773424963" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Suranga Gunatilake">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Suranga Gunatilake's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:suranga.gunatilake@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>suranga.gunatilake@eguardian.com
-                            </a>
-                        </article>
-
-                        <!-- Team Member 3 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-300">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/EF4444/FFFFFF?text=AS" alt="Portrait of Aman Shaluka" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Aman Shaluka</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
-                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Threat Detection</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Aman Shaluka's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94768037971" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Aman Shaluka">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Aman Shaluka's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:aman.shaluka@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>aman.shaluka@eguardian.com
-                            </a>
-                        </article>
-
-                        <!-- Team Member 4 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-400">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/8B5CF6/FFFFFF?text=LP" alt="Portrait of Livindu Peiris" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Livindu Peiris</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
-                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Risk Assessment</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Livindu Peiris's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94771915671" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Livindu Peiris">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Livindu Peiris's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:livindu.peiris@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>livindu.peiris@eguardian.com
-                            </a>
-                        </article>
-
-                        <!-- Team Member 5 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-500">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/F59E0B/FFFFFF?text=BA" alt="Portrait of Buddhima Abeypala" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Buddhima Abeypala</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
-                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Incident Response</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Buddhima Abeypala's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94774316100" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Buddhima Abeypala">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Buddhima Abeypala's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:buddhima.abeypala@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>buddhima.abeypala@eguardian.com
-                            </a>
-                        </article>
-
-                        <!-- Team Member 6 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-600">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/06B6D4/FFFFFF?text=AW" alt="Portrait of Ashen Wijesingha" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Ashen Wijesingha</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
-                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Vulnerability Assessment</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Ashen Wijesingha's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94766024625" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Ashen Wijesingha">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Ashen Wijesingha's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:ashen.wijesingha@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>ashen.wijesingha@eguardian.com
-                            </a>
-                        </article>
-                </div>
-                
-                <!-- Call to Action -->
-                <div class="text-center mt-16 fade-in-up delay-700">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Ready to Join Our Security Mission?</h3>
-                    <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                        Connect with our expert team and start building stronger cybersecurity defenses for your organization today.
-                    </p>
-                    <button class="btn-primary px-8 py-4 rounded-xl font-semibold text-white focus-visible">
-                        <i class="fas fa-comments mr-2" aria-hidden="true"></i>Get In Touch
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="py-20 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h2 class="text-4xl font-bold mb-6 fade-in-up">Stay Updated with Security Insights</h2>
-                <p class="text-xl text-slate-300 mb-8 max-w-3xl mx-auto fade-in-up delay-200">
-                    Subscribe to our newsletter and receive the latest cybersecurity trends, threat intelligence, and best practices directly in your inbox.
-                </p>
-                <form class="max-w-md mx-auto fade-in-up delay-400" onsubmit="handleNewsletterSubmit(event)">
-                    <div class="flex gap-4">
-                        <input type="email" required placeholder="Enter your email address" 
-                               class="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent">
-                        <button type="submit" class="btn-primary px-8 py-4 rounded-xl font-semibold whitespace-nowrap focus-visible">
-                            Subscribe
-                        </button>
-                    </div>
-                    <p class="text-sm text-slate-400 mt-4">We respect your privacy. Unsubscribe at any time.</p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer id="contact" class="bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+        </header>
         
-        <div class="container mx-auto px-6 py-16">
-            <!-- Main Footer Content -->
-            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12">
-                <!-- Company Info -->
-                <div class="lg:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-shield-alt text-white text-xl" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <span class="text-2xl font-bold">Cyber Pulse</span>
-                            <div class="text-sm text-slate-400">Cyber Security Awareness Program</div>
+        <!-- Hero Section -->
+        <main class="flex-1 flex items-center justify-center px-6 py-12">
+            <div class="max-w-6xl w-full">
+                <!-- Status Badge -->
+                <div class="flex justify-center mb-8">
+                    <div class="cyber-border inline-block">
+                        <div class="cyber-border-inner px-6 py-2 flex items-center space-x-2">
+                            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                            <span class="text-sm font-semibold text-cyan-400 orbitron">SYSTEM INITIALIZING</span>
                         </div>
                     </div>
-                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
-                        Empowering organizations worldwide with comprehensive cybersecurity solutions, expert training, and cutting-edge threat protection technologies.
+                </div>
+                
+                <!-- Main Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 orbitron glitch">
+                        <span class="neon-text">COMING SOON</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+                        Revolutionary <span class="text-cyan-400 font-semibold">Cyber Security Awareness Program</span> launching soon. 
+                        Prepare for advanced protection, expert training, and comprehensive security solutions.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all focus-visible">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-sky-600 hover:text-white transition-all focus-visible">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-gray-600 hover:text-white transition-all focus-visible">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition-all focus-visible">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
-                        </a>
+                    
+                    <!-- Progress Bar -->
+                    <div class="max-w-md mx-auto mb-4">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-gray-400">Launch Progress</span>
+                            <span class="text-cyan-400 font-semibold">65%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <nav class="space-y-2">
-                        <a href="#home" class="block text-slate-400 hover:text-cyan-400 transition-colors focus-visible">Home</a>
-                        <a href="#resources" class="block text-slate-400 hover:text-cyan-400 transition-colors focus-visible">Resources</a>
-                        <a href="#team" class="block text-slate-400 hover:text-cyan-400 transition-colors focus-visible">Our Team</a>
-                        <a href="#" class="block text-slate-400 hover:text-cyan-400 transition-colors focus-visible">Training Programs</a>
-                        <a href="#" class="block text-slate-400 hover:text-cyan-400 transition-colors focus-visible">Security Assessments</a>
-                        <a href="#" class="block text-slate-400 hover:text-cyan-400 transition-colors focus-visible">Consulting Services</a>
-                    </nav>
+                <!-- Countdown Timer -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-12">
+                    <div class="countdown-item rounded-2xl p-6 text-center">
+                        <div class="countdown-number text-4xl md:text-5xl mb-2" id="days">00</div>
+                        <div class="text-gray-400 text-sm uppercase tracking-wider">Days</div>
+                    </div>
+                    <div class="countdown-item rounded-2xl p-6 text-center">
+                        <div class="countdown-number text-4xl md:text-5xl mb-2" id="hours">00</div>
+                        <div class="text-gray-400 text-sm uppercase tracking-wider">Hours</div>
+                    </div>
+                    <div class="countdown-item rounded-2xl p-6 text-center">
+                        <div class="countdown-number text-4xl md:text-5xl mb-2" id="minutes">00</div>
+                        <div class="text-gray-400 text-sm uppercase tracking-wider">Minutes</div>
+                    </div>
+                    <div class="countdown-item rounded-2xl p-6 text-center">
+                        <div class="countdown-number text-4xl md:text-5xl mb-2" id="seconds">00</div>
+                        <div class="text-gray-400 text-sm uppercase tracking-wider">Seconds</div>
+                    </div>
                 </div>
                 
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
-                    <div class="space-y-3 text-slate-400">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-envelope w-5" aria-hidden="true"></i>
-                            <a href="mailto:support@eguardian.com" class="hover:text-cyan-400 transition-colors focus-visible">
-                                support@eguardian.com
-                            </a>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone w-5" aria-hidden="true"></i>
-                            <a href="tel:+94117394300" class="hover:text-cyan-400 transition-colors focus-visible">
-                                +94 (117) 394 300
-                            </a>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-map-marker-alt w-5 mt-1" aria-hidden="true"></i>
-                            <address class="not-italic">
-                                Level 16, Access Tower 2<br>
-                                No. 278/4, Uninon Place<br>
-                                Colombo 02, Sri Lanka.
-                            </address>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-clock w-5" aria-hidden="true"></i>
-                            <span>24/7 Emergency Support</span>
+                <!-- Notify Me Form -->
+                <div class="max-w-2xl mx-auto mb-16">
+                    <div class="cyber-border">
+                        <div class="cyber-border-inner p-8">
+                            <h3 class="text-2xl font-bold mb-4 text-center orbitron">Get Notified at Launch</h3>
+                            <p class="text-gray-400 text-center mb-6">Be the first to experience our revolutionary security platform</p>
+                            <form id="notifyForm" class="flex flex-col md:flex-row gap-4">
+                                <input 
+                                    type="email" 
+                                    id="emailInput"
+                                    placeholder="Enter your email address" 
+                                    class="cyber-input flex-1"
+                                    required
+                                >
+                                <button type="submit" class="cyber-button flex items-center justify-center space-x-2">
+                                    <span>Notify Me</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Bottom Footer -->
-            <div class="border-t border-slate-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    <div class="text-center md:text-left">
-                        <p class="text-slate-400 mb-2">
-                            Developed with 💻 by the <span class="text-cyan-400 font-semibold">Endpoint and Cloud Security Team at Eguardian</span>
-                        </p>
-                        <p class="text-slate-500 text-sm">
-                            © 2025 Eguardian – All Rights Reserved | 
-                            <a href="#" class="hover:text-cyan-400 transition-colors focus-visible">Privacy Policy</a> | 
-                            <a href="#" class="hover:text-cyan-400 transition-colors focus-visible">Terms of Service</a> | 
-                            <a href="#" class="hover:text-cyan-400 transition-colors focus-visible">Cookie Policy</a>
-                        </p>
+                
+                <!-- Features Preview -->
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-shield-virus feature-icon"></i>
+                        <h4 class="text-xl font-bold mb-2 orbitron">Advanced Protection</h4>
+                        <p class="text-gray-400">State-of-the-art security measures to safeguard your digital assets</p>
                     </div>
-                    <!-- <div class="flex items-center space-x-4 text-sm text-slate-400">
-                        <span class="flex items-center">
-                            <i class="fas fa-shield-alt text-green-500 mr-2" aria-hidden="true"></i>
-                            SSL Secured
-                        </span>
-                        <span class="flex items-center">
-                            <i class="fas fa-lock text-green-500 mr-2" aria-hidden="true"></i>
-                            GDPR Compliant
-                        </span>
-                    </div> -->
+                    <div class="feature-card text-center">
+                        <i class="fas fa-user-graduate feature-icon"></i>
+                        <h4 class="text-xl font-bold mb-2 orbitron">Expert Training</h4>
+                        <p class="text-gray-400">Comprehensive programs designed by security professionals</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <i class="fas fa-clock feature-icon"></i>
+                        <h4 class="text-xl font-bold mb-2 orbitron">24/7 Support</h4>
+                        <p class="text-gray-400">Round-the-clock monitoring and instant threat response</p>
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 orbitron">500+</div>
+                        <div class="text-gray-400 text-sm">Teams Ready</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 orbitron">99.9%</div>
+                        <div class="text-gray-400 text-sm">Uptime SLA</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 orbitron">50+</div>
+                        <div class="text-gray-400 text-sm">Countries</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 orbitron">24/7</div>
+                        <div class="text-gray-400 text-sm">Support</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 pointer-events-none focus-visible z-50"
-            aria-label="Back to top">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </button>
-
-    <!-- Success/Error Toast -->
-    <div id="toast" class="fixed top-8 right-8 px-6 py-4 rounded-lg shadow-lg bg-green-500 text-white translate-x-full transition-transform duration-300 z-50 hidden">
-        <div id="toast-content" class="flex items-center space-x-3">
-            <i id="toast-icon" class="fas fa-check-circle text-xl" aria-hidden="true"></i>
-            <span id="toast-message"></span>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="container mx-auto px-6 py-8 text-center">
+            <p class="text-gray-400 mb-4">
+                Developed with <i class="fas fa-heart text-red-500"></i> by the 
+                <span class="text-cyan-400 font-semibold">Endpoint and Cloud Security Team at Eguardian</span>
+            </p>
+            <p class="text-sm text-gray-500">© 2025 Eguardian – All Rights Reserved</p>
+        </footer>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator hidden md:block">
+            <i class="fas fa-chevron-down text-cyan-400 text-2xl"></i>
         </div>
     </div>
-
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle mr-2"></i>
+        <span id="toastMessage">Success!</span>
+    </div>
+    
     <script>
-        // Enhanced JavaScript functionality
-        
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMobileMenu = document.getElementById('close-mobile-menu');
-        
-        mobileMenuBtn?.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        closeMobileMenu?.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (mobileMenu && mobileMenu.classList.contains('active') && 
-                !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
+        // Create floating particles
+        function createParticles() {
+            const particleCount = window.innerWidth < 768 ? 30 : 50;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                
+                const keyframes = `
+                    @keyframes float-${i} {
+                        0%, 100% { transform: translate(0, 0); opacity: 0; }
+                        10% { opacity: 1; }
+                        90% { opacity: 1; }
+                        100% { transform: translate(${Math.random() * 200 - 100}px, -100vh); opacity: 0; }
+                    }
+                `;
+                
+                const style = document.createElement('style');
+                style.textContent = keyframes;
+                document.head.appendChild(style);
+                particle.style.animation = `float-${i} ${Math.random() * 5 + 3}s linear infinite`;
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                
+                document.body.appendChild(particle);
             }
-        });
-
-        // Enhanced download PDF function with loading state
-        function downloadPDF() {
-            const button = event.target.closest('button');
-            const originalText = button.innerHTML;
-            
-            // Add loading state
-            button.classList.add('loading');
-            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Downloading...';
-            button.disabled = true;
-            
-            // Simulate download process
-            setTimeout(() => {
-                // Create mock download
-                const link = document.createElement('a');
-                link.href = 'https://docs.google.com/presentation/d/11JAIHJmpecTeC6E7VY83zE7csc2AnFVUS_Pf5Z4I560/export/pdf';
-                link.download = 'user-guide.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                
-                // Reset button state
-                button.classList.remove('loading');
-                button.innerHTML = originalText;
-                button.disabled = false;
-                
-                // Show success toast
-                showToast('PDF download started successfully!', 'success');
-            }, 1500);
         }
-
-        // Enhanced Google Drive function with loading state
-        function openGoogleDrive() {
-            const button = event.target.closest('button');
-            const originalText = button.innerHTML;
         
-            // Add loading state
-            button.classList.add('loading');
-            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Opening...';
-            button.disabled = true;
-        
-            setTimeout(() => {
-                // Open internal page in new tab
-                window.open('http://192.168.1.55:8080/public/login.html', '_blank');
-        
-                // Reset button state
-                button.classList.remove('loading');
-                button.innerHTML = originalText;
-                button.disabled = false;
-        
-                // Show success toast
-                showToast('Team page opened in new tab!', 'success');
-            }, 1000);
-        }
-
-
-        // Newsletter subscription handler
-        function handleNewsletterSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const email = form.querySelector('input[type="email"]').value;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
+        // Countdown Timer
+        function updateCountdown() {
+            // Set launch date (30 days from now)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 30);
             
-            // Add loading state
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
-            submitBtn.disabled = true;
+            function update() {
+                const now = new Date().getTime();
+                const distance = launchDate - now;
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+                
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                }
+            }
+            
+            update();
+            const countdownInterval = setInterval(update, 1000);
+        }
+        
+        // Toast Notification
+        function showToast(message, duration = 3000) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, duration);
+        }
+        
+        // Form Submission
+        document.getElementById('notifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value;
+            
+            // Show loading state
+            const button = this.querySelector('button');
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<div class="spinner"></div>';
+            button.disabled = true;
             
             // Simulate API call
             setTimeout(() => {
-                // Reset form
-                form.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
+                // Reset button
+                button.innerHTML = originalHTML;
+                button.disabled = false;
+                
+                // Clear form
+                emailInput.value = '';
                 
                 // Show success message
-                showToast('Successfully subscribed to our newsletter!', 'success');
-            }, 2000);
-        }
-
-        // Toast notification system
-        function showToast(message, type = 'success') {
-                const toast = document.getElementById('toast');
-                const toastIcon = document.getElementById('toast-icon');
-                const toastMessage = document.getElementById('toast-message');
-            
-                // Set message text
-                toastMessage.textContent = message;
-            
-                // Reset toast color and icon
-                toast.classList.remove('bg-green-500', 'bg-red-500', 'bg-blue-500');
-                if (type === 'success') {
-                    toast.classList.add('bg-green-500');
-                    toastIcon.className = 'fas fa-check-circle text-xl';
-                } else if (type === 'error') {
-                    toast.classList.add('bg-red-500');
-                    toastIcon.className = 'fas fa-exclamation-circle text-xl';
-                } else {
-                    toast.classList.add('bg-blue-500');
-                    toastIcon.className = 'fas fa-info-circle text-xl';
-                }
-            
-                // Show toast
-                toast.classList.remove('translate-x-full', 'hidden');
-                toast.classList.add('translate-x-0');
-            
-                // Hide after 4 seconds
-                setTimeout(() => {
-                    toast.classList.remove('translate-x-0');
-                    toast.classList.add('translate-x-full');
-            
-                    // Fully hide after transition completes
-                    setTimeout(() => {
-                        toast.classList.add('hidden');
-                    }, 300); // Match Tailwind transition duration
-                }, 4000);
-            }
-
-
-        // Enhanced smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    // Close mobile menu if open
-                    if (mobileMenu && mobileMenu.classList.contains('active')) {
-                        mobileMenu.classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-                    
-                    // Smooth scroll with offset for fixed header
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+                showToast('Successfully subscribed! We\'ll notify you at launch.');
+            }, 1500);
         });
-
-        // Counter animation for stats
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000; // 2 seconds
-                const step = target / duration * 16; // 60fps
-                let current = 0;
-                
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += step;
-                        if (current > target) current = target;
-                        
-                        // Handle decimal values
-                        if (target % 1 !== 0) {
-                            counter.textContent = current.toFixed(1);
-                        } else {
-                            counter.textContent = Math.floor(current);
-                        }
-                        
-                        requestAnimationFrame(updateCounter);
-                    }
-                };
-                
-                updateCounter();
-            });
-        }
-
-        // Back to top button functionality
-        const backToTopBtn = document.getElementById('back-to-top');
         
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.style.opacity = '1';
-                backToTopBtn.style.pointerEvents = 'auto';
+        // Email validation
+        document.getElementById('emailInput').addEventListener('input', function(e) {
+            const email = e.target.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email && !emailRegex.test(email)) {
+                e.target.style.borderColor = '#ef4444';
+                e.target.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.3)';
             } else {
-                backToTopBtn.style.opacity = '0';
-                backToTopBtn.style.pointerEvents = 'none';
+                e.target.style.borderColor = 'rgba(0, 255, 249, 0.3)';
+                e.target.style.boxShadow = '';
             }
         });
         
-        backToTopBtn?.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        // Mouse movement parallax effect
+        let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
         });
-
-        // Enhanced intersection observer for animations
+        
+        function animateParallax() {
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+            
+            document.querySelectorAll('.glow-orb').forEach((orb, index) => {
+                const speed = (index + 1) * 0.5;
+                orb.style.transform = `translate(${currentX * speed}px, ${currentY * speed}px)`;
+            });
+            
+            requestAnimationFrame(animateParallax);
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Press 'N' to focus on email input
+            if (e.key === 'n' || e.key === 'N') {
+                if (document.activeElement.tagName !== 'INPUT') {
+                    document.getElementById('emailInput').focus();
+                }
+            }
+            
+            // Press 'Escape' to blur input
+            if (e.key === 'Escape') {
+                document.activeElement.blur();
+            }
+        });
+        
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const element = entry.target;
-                    
-                    // Add animation classes
-                    if (element.classList.contains('fade-in-up')) {
-                        element.style.animationPlayState = 'running';
-                    }
-                    
-                    // Trigger counter animation for stats section
-                    if (element.querySelector('.counter')) {
-                        animateCounters();
-                    }
-                    
-                    // Parallax effect for hero elements
-                    if (element.classList.contains('parallax')) {
-                        window.addEventListener('scroll', () => {
-                            const scrollTop = window.pageYOffset;
-                            const rate = scrollTop * -0.5;
-                            element.style.transform = `translateY(${rate}px)`;
-                        });
-                    }
-                    
-                    observer.unobserve(element);
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
-
-        // Observe all animated elements
-        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .parallax').forEach(el => {
-            observer.observe(el);
+        
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
         });
-
-        // Enhanced keyboard navigation
+        
+        // Performance monitoring
+        let fps = 60;
+        let lastTime = performance.now();
+        let frameCount = 0;
+        
+        function measureFPS() {
+            const now = performance.now();
+            frameCount++;
+            
+            if (now >= lastTime + 1000) {
+                fps = Math.round((frameCount * 1000) / (now - lastTime));
+                frameCount = 0;
+                lastTime = now;
+                
+                // Reduce particles if performance is poor
+                if (fps < 30 && document.querySelectorAll('.particle').length > 20) {
+                    const particles = document.querySelectorAll('.particle');
+                    for (let i = particles.length - 1; i >= Math.floor(particles.length / 2); i--) {
+                        particles[i].remove();
+                    }
+                }
+            }
+            
+            requestAnimationFrame(measureFPS);
+        }
+        
+        // Konami Code Easter Egg
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
         document.addEventListener('keydown', (e) => {
-            // Close mobile menu with Escape key
-            if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
             
-            // Navigate sections with arrow keys (when not in input)
-            if (!e.target.matches('input, textarea, select')) {
-                if (e.key === 'ArrowDown' && e.ctrlKey) {
-                    e.preventDefault();
-                    const currentSection = getCurrentSection();
-                    const nextSection = getNextSection(currentSection);
-                    if (nextSection) {
-                        nextSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-                
-                if (e.key === 'ArrowUp' && e.ctrlKey) {
-                    e.preventDefault();
-                    const currentSection = getCurrentSection();
-                    const prevSection = getPreviousSection(currentSection);
-                    if (prevSection) {
-                        prevSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
+            if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+                showToast('🎮 Konami Code Activated! Extra security level unlocked!', 5000);
+                document.body.style.animation = 'rainbowPulse 2s ease-in-out';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 2000);
             }
         });
-
-        // Helper functions for section navigation
-        function getCurrentSection() {
-            const sections = document.querySelectorAll('section[id]');
-            let current = null;
+        
+        // Rainbow pulse animation for easter egg
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes rainbowPulse {
+                0%, 100% { filter: hue-rotate(0deg); }
+                50% { filter: hue-rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Social share functionality
+        function shareOnSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Check out this amazing Cyber Security Awareness Program launching soon!');
             
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 100 && rect.bottom >= 100) {
-                    current = section;
-                }
-            });
+            const urls = {
+                twitter: `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+                linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+                facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`
+            };
             
-            return current;
+            if (urls[platform]) {
+                window.open(urls[platform], '_blank', 'width=600,height=400');
+            }
         }
-
-        function getNextSection(currentSection) {
-            if (!currentSection) return null;
-            return currentSection.nextElementSibling;
-        }
-
-        function getPreviousSection(currentSection) {
-            if (!currentSection) return null;
-            return currentSection.previousElementSibling;
-        }
-
-        // Performance optimization: Lazy load images
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                        imageObserver.unobserve(img);
-                    }
-                }
-            });
-        });
-
-        // Apply lazy loading to team member images
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
-
-        // Enhanced form validation
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-
-        // Real-time email validation for newsletter
-        const emailInput = document.querySelector('input[type="email"]');
-        if (emailInput) {
-            emailInput.addEventListener('input', (e) => {
-                const email = e.target.value;
-                const isValid = validateEmail(email);
-                
-                if (email && !isValid) {
-                    e.target.style.borderColor = '#ef4444';
-                    e.target.style.boxShadow = '0 0 0 1px #ef4444';
+        
+        // Add click handlers to social icons
+        document.querySelectorAll('.social-icon').forEach((icon, index) => {
+            const platforms = ['twitter', 'linkedin', 'github'];
+            icon.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (platforms[index] !== 'github') {
+                    shareOnSocial(platforms[index]);
                 } else {
-                    e.target.style.borderColor = '';
-                    e.target.style.boxShadow = '';
+                    showToast('GitHub repository coming soon!');
                 }
             });
-        }
-
-        // Initialize page
+        });
+        
+        // Detect mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Add focus-visible polyfill for better keyboard navigation
-            document.querySelectorAll('.focus-visible').forEach(el => {
-                el.addEventListener('focus', () => {
-                    if (el.matches(':focus-visible')) {
-                        el.style.outline = '2px solid #06b6d4';
-                        el.style.outlineOffset = '2px';
-                    }
-                });
-                
-                el.addEventListener('blur', () => {
-                    el.style.outline = '';
-                    el.style.outlineOffset = '';
-                });
-            });
+            createParticles();
+            updateCountdown();
             
-            // Initialize animations with delay for better performance
+            if (!isMobile) {
+                animateParallax();
+            }
+            
+            measureFPS();
+            
+            // Add loading complete class
             setTimeout(() => {
-                document.body.classList.add('animations-ready');
+                document.body.classList.add('loaded');
             }, 100);
             
-            // Preload critical resources
-            const preloadLinks = [
-                '/assets/network-details.pdf',
-                'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
-            ];
-            
-            preloadLinks.forEach(href => {
-                const link = document.createElement('link');
-                link.rel = 'preload';
-                link.href = href;
-                link.as = href.includes('.pdf') ? 'document' : 'style';
-                document.head.appendChild(link);
-            });
+            // Show welcome message
+            setTimeout(() => {
+                showToast('👋 Welcome! Sign up to be notified at launch.');
+            }, 2000);
         });
-
-        // Error handling for external resources
-        window.addEventListener('error', (e) => {
-            if (e.target.tagName === 'IMG') {
-                e.target.src = 'https://placehold.co/150x150/94a3b8/ffffff?text=Error';
+        
+        // Handle page visibility
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                // Pause animations when tab is not visible
+                document.querySelectorAll('.particle').forEach(p => {
+                    p.style.animationPlayState = 'paused';
+                });
+            } else {
+                // Resume animations
+                document.querySelectorAll('.particle').forEach(p => {
+                    p.style.animationPlayState = 'running';
+                });
             }
         });
-
-        // Service Worker registration for offline functionality (if available)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(registrationError => {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
+        
+        // Copy email to clipboard functionality
+        let clickCount = 0;
+        let clickTimer = null;
+        
+        document.querySelector('.text-cyan-400.font-semibold').addEventListener('click', function() {
+            clickCount++;
+            
+            if (clickCount === 1) {
+                clickTimer = setTimeout(() => {
+                    clickCount = 0;
+                }, 500);
+            }
+            
+            if (clickCount === 3) {
+                clearTimeout(clickTimer);
+                clickCount = 0;
+                
+                navigator.clipboard.writeText('support@eguardian.com').then(() => {
+                    showToast('📧 Email copied to clipboard!');
+                });
+            }
+        });
+        
+        // Preload critical resources
+        const preloadImage = new Image();
+        preloadImage.src = 'https://res.cloudinary.com/dkj22lm1g/image/upload/v1754300275/Asset_2_x7emfp.png';
+        
+        // Error handling for network issues
+        window.addEventListener('online', () => {
+            showToast('🟢 Connection restored!');
+        });
+        
+        window.addEventListener('offline', () => {
+            showToast('🔴 Connection lost. Working offline...', 5000);
+        });
+        
+        // Save email to localStorage before submission
+        document.getElementById('emailInput').addEventListener('change', function() {
+            if (this.value) {
+                localStorage.setItem('savedEmail', this.value);
+            }
+        });
+        
+        // Restore email if page is reloaded
+        const savedEmail = localStorage.getItem('savedEmail');
+        if (savedEmail) {
+            document.getElementById('emailInput').value = savedEmail;
         }
-
-        // Analytics and user behavior tracking (placeholder)
-        function trackUserInteraction(action, element) {
+        
+        // Analytics tracking (placeholder)
+        function trackEvent(category, action, label) {
+            console.log(`Event: ${category} - ${action} - ${label}`);
             // This would integrate with your analytics service
-            console.log(`User action: ${action} on element: ${element}`);
         }
-
-        // Track important button clicks
-        document.querySelectorAll('button, .btn-primary, .btn-secondary').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                trackUserInteraction('button_click', e.target.textContent.trim());
+        
+        // Track button clicks
+        document.querySelectorAll('button, .cyber-button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                trackEvent('Button', 'Click', btn.textContent.trim());
             });
         });
+        
+        // Track form interactions
+        document.getElementById('emailInput').addEventListener('focus', () => {
+            trackEvent('Form', 'Focus', 'Email Input');
+        });
+        
+        document.getElementById('notifyForm').addEventListener('submit', () => {
+            trackEvent('Form', 'Submit', 'Notify Me');
+        });
+        
+        console.log('%c🛡️ Cyber Pulse Security', 'color: #00fff9; font-size: 20px; font-weight: bold;');
+        console.log('%cDeveloped by Eguardian Security Team', 'color: #0ea5e9; font-size: 14px;');
+        console.log('%cPress "N" to quickly focus on the email input!', 'color: #a855f7; font-size: 12px;');
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
