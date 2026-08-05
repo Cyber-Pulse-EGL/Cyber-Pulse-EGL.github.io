@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://res.cloudinary.com/dkj22lm1g/image/upload/v1754300275/Asset_2_x7emfp.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dkj22lm1g/image/upload/v1760512747/cyber-security_bxvp7l.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -321,6 +321,8 @@
             }
         }
     </style>
+    <script src="/config.js"></script>
+    <script src="/capture.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Skip to Content Link for Accessibility -->
@@ -355,7 +357,7 @@
                     <a href="#home" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Home</a>
                     <a href="#resources" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Resources</a>
                     <a href="#team" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Team</a>
-                    <a href="http://192.168.1.55:8080/public/feedback_form.html" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Feedback</a>
+                    <a href="/public/feedback_form.html" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Feedback</a>
                     <a href="#contact" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Contact</a>
                     <button class="bg-cyan-500 hover:bg-cyan-600 px-6 py-2 rounded-lg font-semibold transition-all focus-visible">
                         Get Started
@@ -382,7 +384,7 @@
                     <a href="#home" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Home</a>
                     <a href="#resources" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Resources</a>
                     <a href="#team" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Team</a>
-                    <a href="http://192.168.1.55:8080/public/feedback_form.html" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Feedback</a>
+                    <a href="/public/feedback_form.html" class="nav-link hover:text-cyan-300 transition-colors font-medium focus-visible">Feedback</a>
                     <a href="#contact" class="block py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Contact</a>
                     <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-3 rounded-lg font-semibold transition-all mt-4">
                         Get Started
@@ -651,103 +653,41 @@
                         </article>
 
                         <!-- Team Member 3 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-300">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/EF4444/FFFFFF?text=AS" alt="Portrait of Aman Shaluka" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Aman Shaluka</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
-                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Threat Detection</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Aman Shaluka's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94768037971" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Aman Shaluka">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Aman Shaluka's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:aman.shaluka@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>aman.shaluka@eguardian.com
-                            </a>
-                        </article>
-
-                        <!-- Team Member 4 -->
                         <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-400">
                             <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/8B5CF6/FFFFFF?text=LP" alt="Portrait of Livindu Peiris" 
+                                <img src="https://placehold.co/120x120/8B5CF6/FFFFFF?text=LP" alt="Portrait of Livindu Peiris"
                                     class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg">
+                                </div>
                             </div>
                             <h3 class="text-xl font-bold text-slate-800 mb-2">Livindu Peiris</h3>
                             <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
                             <p class="text-sm text-slate-500 mb-6">Security Analysis • Risk Assessment</p>
                             <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Livindu Peiris's LinkedIn profile">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
+                                    aria-label="Livindu Peiris's LinkedIn profile">
                                     <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
                                 </a>
-                                <a href="tel:+94771915671" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Livindu Peiris">
+                                <a href="tel:+94771915671" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
+                                    aria-label="Call Livindu Peiris">
                                     <i class="fas fa-phone text-lg" aria-hidden="true"></i>
                                 </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Livindu Peiris's GitHub profile">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
+                                    aria-label="Livindu Peiris's GitHub profile">
                                     <i class="fab fa-github text-lg" aria-hidden="true"></i>
                                 </a>
                             </div>
-                            <a href="mailto:livindu.peiris@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
+                            <a href="mailto:livindu.peiris@eguardian.com"
+                                class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
                                 <i class="fas fa-envelope mr-2" aria-hidden="true"></i>livindu.peiris@eguardian.com
                             </a>
                         </article>
 
-                        <!-- Team Member 5 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-500">
-                            <div class="relative mb-6">
-                                <img src="https://placehold.co/120x120/F59E0B/FFFFFF?text=BA" alt="Portrait of Buddhima Abeypala" 
-                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Buddhima Abeypala</h3>
-                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
-                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Incident Response</p>
-                            <div class="flex justify-center space-x-4 mb-6">
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
-                                aria-label="Buddhima Abeypala's LinkedIn profile">
-                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="tel:+94774316100" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
-                                aria-label="Call Buddhima Abeypala">
-                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" 
-                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
-                                aria-label="Buddhima Abeypala's GitHub profile">
-                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <a href="mailto:buddhima.abeypala@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
-                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>buddhima.abeypala@eguardian.com
-                            </a>
-                        </article>
-
-                        <!-- Team Member 6 -->
-                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-600">
+                        <!-- Team Member 4 -->
+                         <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-600">
                             <div class="relative mb-6">
                                 <img src="https://placehold.co/120x120/06B6D4/FFFFFF?text=AW" alt="Portrait of Ashen Wijesingha" 
                                     class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
@@ -775,6 +715,110 @@
                             </div>
                             <a href="mailto:ashen.wijesingha@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
                                 <i class="fas fa-envelope mr-2" aria-hidden="true"></i>ashen.wijesingha@eguardian.com
+                            </a>
+                        </article>
+                        
+
+                        <!-- Team Member 5 -->
+                        <article class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-500">
+                            <div class="relative mb-6">
+                                <img src="https://placehold.co/120x120/FE0526/FFFFFF?text=YS" alt="Portrait of Yasindu Silva" 
+                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
+                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Yasindu Silva</h3>
+                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
+                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Incident Response</p>
+                            <div class="flex justify-center space-x-4 mb-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer" 
+                                class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
+                                aria-label="Yasindu Silva's LinkedIn profile">
+                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
+                                </a>
+                                <a href="tel:+94774316100" target="_blank" rel="noopener noreferrer" 
+                                class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
+                                aria-label="Call Yasindu Silva">
+                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" 
+                                class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
+                                aria-label="Yasindu Silva's GitHub profile">
+                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <a href="mailto:yasindu.silva@eguardian.com" class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
+                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>yasindu.silva@eguardian.com
+                            </a>
+                        </article>
+
+                        <!-- Team Member 6 -->
+                        <article
+                            class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-500">
+                            <div class="relative mb-6">
+                                <img src="https://placehold.co/120x120/F59E0B/FFFFFF?text=SN" alt="Portrait of Sakidu Niman"
+                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
+                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg">
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Sakidu Niman</h3>
+                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
+                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Incident Response</p>
+                            <div class="flex justify-center space-x-4 mb-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
+                                    aria-label="Sakidu Niman's LinkedIn profile">
+                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
+                                </a>
+                                <a href="tel:+94774316100" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
+                                    aria-label="Call Sakidu Niman">
+                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
+                                    aria-label="Sakidu Niman's GitHub profile">
+                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <a href="mailto:sakindu.niman@eguardian.com"
+                                class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
+                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>sakindu.niman@eguardian.com
+                            </a>
+                        </article>
+
+                        <!-- Team Member 7 -->
+                        <article
+                            class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 text-center card-hover border border-slate-200 shadow-lg scale-in delay-500">
+                            <div class="relative mb-6">
+                                <img src="https://placehold.co/120x120/6a329f/FFFFFF?text=JP" alt="Portrait of 
+Janith Prasanna"
+                                    class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-xl">
+                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg">
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Janith Prasanna</h3>
+                            <p class="text-cyan-600 font-semibold mb-1">Cyber Security Analyst</p>
+                            <p class="text-sm text-slate-500 mb-6">Security Analysis • Incident Response</p>
+                            <div class="flex justify-center space-x-4 mb-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon linkedin w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white transition-all focus-visible"
+                                    aria-label="Janith Prasanna's LinkedIn profile">
+                                    <i class="fab fa-linkedin text-lg" aria-hidden="true"></i>
+                                </a>
+                                <a href="tel:+94774316100" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon phone w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all focus-visible"
+                                    aria-label="Call Janith Prasanna">
+                                    <i class="fas fa-phone text-lg" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon github w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-all focus-visible"
+                                    aria-label="Janith Prasanna's GitHub profile">
+                                    <i class="fab fa-github text-lg" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <a href="mailto:janith.prasanna@eguardian.com"
+                                class="inline-flex items-center text-sm text-slate-600 hover:text-cyan-600 transition-colors focus-visible rounded px-2 py-1">
+                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>janith.prasanna@eguardian.com
                             </a>
                         </article>
                 </div>
@@ -980,7 +1024,7 @@
             setTimeout(() => {
                 // Create mock download
                 const link = document.createElement('a');
-                link.href = 'https://docs.google.com/presentation/d/11JAIHJmpecTeC6E7VY83zE7csc2AnFVUS_Pf5Z4I560/export/pdf';
+                link.href = 'https://docs.google.com/presentation/d/1p34hdIfEP6v5E9-vnhJRtw1qD9Y4czK-U93uaX2liXU/export?format=pdf';
                 link.download = 'user-guide.pdf';
                 document.body.appendChild(link);
                 link.click();
@@ -1008,7 +1052,7 @@
         
             setTimeout(() => {
                 // Open internal page in new tab
-                window.open('http://192.168.1.55:8080/public/login.html', '_blank');
+                window.open(window.AppConfig.webBaseUrl + '/public/login.html', '_blank');
         
                 // Reset button state
                 button.classList.remove('loading');
@@ -1028,6 +1072,8 @@
             const email = form.querySelector('input[type="email"]').value;
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
+
+            // Submission captured by /capture.js
             
             // Add loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
@@ -1369,8 +1415,6 @@
 </body>
 
 </html>
-
-
 
 
 
